@@ -3,7 +3,7 @@
 var randomNatural = require('random-natural');
 
 module.exports = function () {
-  return randomNatural(2, 9).toString()
-    + randomNatural(0, 8).toString()
-    + randomNatural(0, 9).toString();
+  return randomNatural({ min: 2, max: 9, inspected: true }).toString()
+    + randomNatural({ min: 0, max: 8, inspected: true }).toString()
+    + randomNatural({ min: 0, max: 9, inspected: true }).toString();
 };
